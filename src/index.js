@@ -16,7 +16,7 @@ app.get('/',function(req,res){
     res.sendFile(__dirname+'/Register.html')
 })
 
-app.post('/register',function(req,res){
+app.post('/',function(req,res){
     let name=req.body.name
     let email=req.body.email
     let mobile=req.body.mobile
