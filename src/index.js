@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine','ejs')
 
 
-app.get('/register',function(req,res){
+app.get('/',function(req,res){
     res.sendFile(__dirname+'/Register.html')
 })
 
