@@ -4,9 +4,9 @@ const sql=require('mysql')
 
 
 const connection=sql.createConnection({
-    host:"https://user-uv8m.onrender.com/",
-    user:"root",
-    password:'',
+    host:"bb09tmo9ia7rkvjlgitr-mysql.services.clever-cloud.com",
+    user:"umd4rw6itdnna500",
+    password:'umd4rw6itdnna500',
     database:"college"
 });
 
