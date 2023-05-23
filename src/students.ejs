@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Students Lists</title>
+</head>
+<body class="container bg-danger">
+   <a href="/register">Regitration</a> 
+<div class="mt-5 ">
+    <h1 class="text-center text-warning text-decoration-underline">Students Lists</h1>
+</div>
+
+<table border="1" width="100%" class="table table-dark table-striped ">
+
+   <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Action</th>
+   </tr>
+
+  <% if(students.length>0){ %> 
+   <% for(let i=0;i<students.length;i++){ %>
+
+   <tr>
+    <td> <%-students[i].id %></td>
+    <td> <%-students[i].name %></td>
+    <td> <%-students[i].email %></td>
+    <td> <%-students[i].mobile %></td>
+    <td><a href="/delete-student?id=<%-students[i].id %>">Delete</a>
+        &nbsp
+        <a href="/update-student?id=<%-students[i].id %>">Update</a>
+    </td>
+    
+   </tr>
+
+
+    <% } %>  
+
+   <% }else{ %> 
+     <h1>Data not Found</h1>
+    <% } %> 
+</table>
+
+
+</body>
+</html>
